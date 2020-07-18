@@ -3,7 +3,7 @@ module.exports = {
   // ...other vue-cli plugin options...
   pwa: {
     name: 'EXIF Viewer',
-    themeColor: '#4DBA87',
+    themeColor: '#FFFFFF',
     msTileColor: '#000000',
     // disable apple mobile web app
     appleMobileWebAppCapable: 'no',
