@@ -9,15 +9,15 @@
           action="https://jsonplaceholder.typicode.com/posts/"
           :http-request="processImage"
           :before-upload="readExif"
-          accept=".jpg, .jpeg, .png, .gif, .heic"
+          accept=".jpg, .jpeg, .heic"
           :show-file-list="false"
         >
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">
-            将文件拖到此处，或
-            <em>点击上传</em>
+            Drap Image file here，or
+            <em>click to upload</em>
           </div>
-          <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+          <div class="el-upload__tip" slot="tip">Only .jpg, .jpeg, .heic files are supported.</div>
         </el-upload>
       </el-col>
     </el-row>
@@ -25,6 +25,8 @@
       <el-col :offset="3" :span="18">
         <div class="summary" v-if="exifTableData.length > 0 ">
           <div class="summary-text">
+            <el-button class="back-btn" type="success" @click="backToSelectImage" icon="el-icon-back">Back</el-button>
+            
             <p>{{ exifTableData.length }} EXIF data are stored in your picture</p>
             <p>User can know that:</p>
             <ul>
@@ -67,6 +69,9 @@ export default {
     };
   },
   methods: {
+    backToSelectImage() {
+      this.showResult = false
+    },
     parseGeoInfo(exifData) {
       let result = {
         lat: 0,
@@ -162,6 +167,21 @@ export default {
 </script>
 
 <style>
+div.el-upload.el-upload--text > div > div {
+  text-align: center;
+  color: black;
+}
+div.el-upload.el-upload--text > div > div em {
+  text-align: center;
+  color: purple;
+}
+div.el-upload__tip {
+  text-align: center;
+  color: white;
+}
+.el-upload__tip em {
+  color: brown;
+}
 div.el-upload.el-upload--text > div {
   width: 100%;
   height: 100%;
@@ -177,7 +197,7 @@ div.el-upload.el-upload--text > div {
 .el-upload {
   min-width: max(80vh, 200px);
   min-height: min(80vh, 150px);
-  max-width: min(80vh, 800px);
+  max-width: max(80vh, 800px);
   max-height: max(60px, 600px);
   display: block;
 }
@@ -208,5 +228,8 @@ div.el-upload.el-upload--text > div {
 .img-wrapper img {
   width: 300px;
   height: 300px;
+}
+.page-wrapper {
+  margin-top: 2em;
 }
 </style>

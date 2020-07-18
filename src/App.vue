@@ -1,11 +1,16 @@
 <template>
   <div id="app">
-    <el-row class="head-row">
-      <el-col :span="3">Logo EXIF Viewer</el-col>
-      <el-col :offset="21" :span="3">Buttons</el-col>
-    </el-row>
-    
+    <div class="head-row">
+        <div><img id="logo" src="/EXIF.gif" alt="EXIF Viewer"></div>
+        <div class="title">EXIF Viewer</div>
+        <div class="btn-wrapper">
+          <a href="https://www.buymeacoffee.com/jwenjian" target="_blank" rel="noopener noreferrer">Buy me a coffee</a>
+        </div>
+    </div>
     <router-view></router-view>
+    <el-row class="footer-row">
+      <el-col :span="12">Made with ❤️ by jwenjian</el-col>
+    </el-row>
   </div>
 </template>
 
@@ -16,8 +21,31 @@ export default {
 </script>
 
 <style>
+.title {
+  font-size: larger;
+  font-weight: bolder;
+}
+.btn-wrapper {
+  justify-self: flex-end;
+  padding-right: 2em;
+}
+#logo {
+  height: 20vh;
+}
 .head-row {
   min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfcfc;
+  box-shadow: green 5px;
+}
+.footer-row {
+  padding: 2em;
+  color: white;
+  position: fixed;
+  position: absolute;
+  bottom: 0;
 }
 html body {
   margin: 0;
