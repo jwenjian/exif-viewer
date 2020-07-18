@@ -2,7 +2,10 @@
   <div id="app">
     <div class="head-row">
         <div><img id="logo" src="/EXIF.gif" alt="EXIF Viewer"></div>
-        <div class="title">EXIF Viewer</div>
+        <div class="title-wrapper">
+          <span class="title">EXIF Viewer</span>
+          <span class="description">View all EXIF info for your jpg, jpeg, heic images</span>
+        </div>
         <div class="btn-wrapper">
           <a href="https://www.buymeacoffee.com/jwenjian" target="_blank" rel="noopener noreferrer">Buy me a coffee</a>
         </div>
@@ -21,7 +24,15 @@ export default {
 </script>
 
 <style>
+.title-wrapper {
+  text-align: center;
+}
+.description {
+  display: block;
+  font-size: smaller;
+}
 .title {
+  display: block;
   font-size: larger;
   font-weight: bolder;
 }
@@ -30,7 +41,7 @@ export default {
   padding-right: 2em;
 }
 #logo {
-  height: 20vh;
+  height: 15vh;
 }
 .head-row {
   min-height: 10vh;
