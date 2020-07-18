@@ -17,7 +17,10 @@
             Drap Image file here，or
             <em>click to upload</em>
           </div>
-          <div class="el-upload__tip" slot="tip">Only .jpg, .jpeg, .heic files are supported.</div>
+          <div class="el-upload__tip" slot="tip">
+            <p>Only .jpg, .jpeg, .heic files are supported.</p>
+            <p>You image will NOT be uploaded to anywhere, it just in your computer, in your browser.</p>
+          </div>
         </el-upload>
       </el-col>
     </el-row>

@@ -12,7 +12,7 @@
     </div>
     <router-view></router-view>
     <el-row class="footer-row">
-      <el-col :span="12">Made with ❤️ by jwenjian</el-col>
+      <el-col :span="12">Made with ❤️ by  <a target="_blank" href="https://github.com/jwenjian">jwenjian</a></el-col>
     </el-row>
   </div>
 </template>
@@ -41,6 +41,7 @@ export default {
   padding-right: 2em;
 }
 #logo {
+  padding-left: 2em;
   height: 15vh;
 }
 .head-row {
@@ -49,13 +50,10 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: #fdfcfc;
-  box-shadow: green 5px;
 }
 .footer-row {
   padding: 2em;
   color: white;
-  position: fixed;
-  position: absolute;
   bottom: 0;
 }
 html body {
