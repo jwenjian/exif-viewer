@@ -33,12 +33,12 @@
             <p>{{ exifTableData.length }} EXIF data are stored in your picture</p>
             <p>User can know that:</p>
             <ul>
-              <li v-if="exifData['Make']">This picture is make of: {{ exifData['Make'] }}</li>
+              <li v-if="exifData['Make']">This picture is made of: {{ exifData['Make'] }}</li>
               <li v-if="exifData['Model']">Your camera model: {{ exifData['Model'] }}</li>
               <li v-if="exifData['Software']">Your software version: {{ exifData['Software'] }}</li>
               <li
                 v-if="exifData['GPSLatitude'] && exifData['GPSLongitude']"
-              >This image is taken at location: {{ exifData['GPSLatitude'] + ',' + exifData['GPSLongitude'] }}</li>
+              >This image was taken at location: {{ exifData['GPSLatitude'] + ',' + exifData['GPSLongitude'] }}</li>
             </ul>
             <p>See below table for detail.</p>
           </div>
