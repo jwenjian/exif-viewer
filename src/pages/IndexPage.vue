@@ -57,7 +57,6 @@
 
 <script>
 import { findEXIFinHEIC, findEXIFinJPEG } from "../exif-heic";
-// import axios from "axios";
 
 export default {
   name: "index-page",
@@ -130,30 +129,6 @@ export default {
           });
         }
         this.showResult = true;
-        // const geoInfo = this.parseGeoInfo(exifData);
-
-        // axios
-        //   .create()
-        //   .get(
-        //     `http://dev.virtualearth.net/REST/v1/Locations/${geoInfo.lat},${geoInfo.lang}`,
-        //     {
-        //       params: {
-        //         key:
-        //           "Aky997C6PvPTL4sRyxntioU0-8ZeR3ja5CzAy_t14TUvB_qXOceZN0_f-JODYizp",
-        //         c: "zh-Hans"
-        //       }
-        //     }
-        //   )
-        //   .then(resp => {
-        //     if (resp.data.statusCode === 200) {
-        //       // success response
-        //       this.imageAddress =
-        //         resp.data.resourceSets[0].resources[0].address.formattedAddress;
-        //     }
-        //   })
-        //   .catch(err => {
-        //     console.log(err);
-        //   });
       };
 
       reader.readAsArrayBuffer(file);
