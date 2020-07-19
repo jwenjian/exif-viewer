@@ -112,7 +112,10 @@ export default {
         }
         this.exifData = exifData;
         if (exifData === false) {
-          console.log("cannot read exif");
+          this.$message({
+            type: 'info',
+            message: 'No EXIF data found'
+          })
           return;
         }
         this.exifTableData = [];
