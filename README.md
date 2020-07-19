@@ -18,4 +18,4 @@ A free online tool to read all the EXIF data of your .jpg, .jpeg, .heic image fi
 
 ## Donation
 
-If you found this useful, you can [buy me a coffee](https://www.buymeacoffee.com/jwenjian)
+If you found this useful, you can give me a star or [buy me a coffee](https://www.buymeacoffee.com/jwenjian)
